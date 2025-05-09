@@ -157,6 +157,20 @@ def evaluate(
         while True:
             try:
                 client = Client(gradio_endpoint)
+                print('split: {}'.format(split))
+                print('subset: {}'.format(subset))
+                print('samples: {}'.format(samples))
+                print('pass_k: {}'.format(pass_k))
+                print('parallel: {}'.format(parallel))
+                print('min_time_limit: {}'.format(min_time_limit))
+
+                print('max_as_limit: {}'.format(max_as_limit))
+                print('max_data_limit: {}'.format(max_data_limit))
+                print('max_stack_limit: {}'.format(max_stack_limit))
+                print('calibrated: {}'.format(calibrated))
+                print('check_gt_only: {}'.format(check_gt_only))
+                print('no_gt: {}'.format(no_gt))
+                print('selective_evaluate: {}'.format(selective_evaluate))
                 results, pass_at_k = client.predict(
                     split=split,
                     subset=subset,
