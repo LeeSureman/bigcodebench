@@ -22,7 +22,7 @@ if __name__ == '__main__':
         calibrated=True,
         check_gt_only=False,
         no_gt=False,
-        selective_evaluate=None,
+        selective_evaluate='',
         api_name="/predict"
     )
     with jsonlines.open('test_results.jsonl', 'w') as f_out:
