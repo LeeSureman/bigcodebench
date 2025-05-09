@@ -13,7 +13,7 @@ from rich.progress import (
     TextColumn,
     TimeElapsedColumn,
 )
-
+import jsonlines
 
 def codegen(
     model: DecoderBase,
@@ -93,6 +93,9 @@ def codegen(
             if (batch_size and len(batch_prompts) == batch_size) or id_num == len(dataset) - 1 or (id_range and id_num == id_range[1] - 1):
                 if not batch_prompts and (id_num == len(dataset) - 1 or (id_range and id_num == id_range[1] - 1)):
                     break
+
+                with jsonlines.open('tmp_prompts.jsonl', "w") as writer:
+                    writer.write_all(batch_prompts)
                 outputs = model.codegen(
                     batch_prompts,
                     do_sample=not greedy,
