@@ -13,7 +13,7 @@ if __name__ == '__main__':
         split='complete',
         subset='hard',
         samples=handle_file('/home/xiaonan/mycode/bigcodebench/tmp_generation.jsonl'),
-        pass_k=1,
+        pass_k="1,5,10",
         parallel=-1,
         min_time_limit=1,
         max_as_limit=30720,
