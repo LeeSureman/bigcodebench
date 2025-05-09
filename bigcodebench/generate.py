@@ -94,9 +94,9 @@ def codegen(
                 if not batch_prompts and (id_num == len(dataset) - 1 or (id_range and id_num == id_range[1] - 1)):
                     break
 
-                with jsonlines.open('tmp_prompts.jsonl', "w") as writer:
-                    writer.write_all(batch_prompts)
-                    exit()
+                # with jsonlines.open('tmp_prompts.jsonl', "w") as writer:
+                #     writer.write_all(batch_prompts)
+                #     exit()
                 outputs = model.codegen(
                     batch_prompts,
                     do_sample=not greedy,
