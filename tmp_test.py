@@ -25,3 +25,6 @@ if __name__ == '__main__':
         selective_evaluate=None,
         api_name="/predict"
     )
+
+    print(results)
+    print(pass_at_k)
