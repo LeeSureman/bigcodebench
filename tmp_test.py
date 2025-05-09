@@ -1,6 +1,7 @@
 import argparse
 from gradio_client import Client, handle_file
 import jsonlines
+import json
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
@@ -25,7 +26,7 @@ if __name__ == '__main__':
         selective_evaluate='',
         api_name="/predict"
     )
-    with jsonlines.open('test_results.jsonl', 'w') as f_out:
-        f_out.write_all(results)
-    print(results)
+
+    json.dump(results, open('test_results.json', 'w'))
+    # print(results)
     print(pass_at_k)
