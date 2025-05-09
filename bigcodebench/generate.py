@@ -96,6 +96,7 @@ def codegen(
 
                 with jsonlines.open('tmp_prompts.jsonl', "w") as writer:
                     writer.write_all(batch_prompts)
+                    exit()
                 outputs = model.codegen(
                     batch_prompts,
                     do_sample=not greedy,
