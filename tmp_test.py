@@ -11,7 +11,7 @@ if __name__ == '__main__':
     gradio_endpoint = "https://bigcode-bigcodebench-evaluator.hf.space/"
     client = Client(gradio_endpoint)
     results, pass_at_k = client.predict(
-        split='complete',
+        split='instruct',
         subset='hard',
         samples=handle_file('/home/xiaonan/mycode/bigcodebench/tmp_generation.jsonl'),
         pass_k="1,5,10",
