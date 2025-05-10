@@ -13,7 +13,7 @@ if __name__ == '__main__':
     results, pass_at_k = client.predict(
         split='instruct',
         subset='hard',
-        samples=handle_file('/home/xiaonan/mycode/bigcodebench/tmp_generation_2.jsonl'),
+        samples=handle_file('/home/xiaonan/mycode/bigcodebench/tmp_generation_3.jsonl'),
         pass_k="1,5,10",
         parallel=-1,
         min_time_limit=1,
