@@ -19,7 +19,7 @@ if __name__ == '__main__':
         min_time_limit=1,
         max_as_limit=30720,
         max_data_limit=30720,
-        max_stack_limit=20,
+        max_stack_limit=10,
         calibrated=True,
         check_gt_only=False,
         no_gt=False,
